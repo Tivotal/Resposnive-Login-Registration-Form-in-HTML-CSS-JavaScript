@@ -1,0 +1,191 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 30px;
+  background: #4070f4;
+}
+
+.container .form {
+  position: absolute;
+  max-width: 430px;
+  width: 100%;
+  background: #fff;
+  padding: 30px;
+  border-radius: 6px;
+}
+
+.container .form.signup {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.forms.show-signup .form.signup {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.forms.show-signup .form.login {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.container .form header {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  color: #232836;
+}
+
+.container .form form {
+  margin-top: 30px;
+}
+
+.container .form .field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 6px;
+}
+
+.container .form form .field input,
+.container .form form .field button {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 6px;
+}
+
+.container .form form .field input {
+  border: 1px solid #cacaca;
+  padding: 0 15px;
+  outline: none;
+}
+
+.container .form form .field input:focus {
+  border-bottom-width: 2px;
+}
+
+.container .form form .field .eye-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #8b8b8b;
+  padding: 5px;
+}
+
+.container .form form .field button {
+  background: #0171d3;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.container .form form .field button:hover {
+  background: #016dcb;
+}
+
+.container .form .form-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.container .form .form-link span,
+.container .form .form-link a {
+  font-size: 14px;
+  font-weight: 400;
+  color: #232836;
+}
+
+.container .form .form-link a {
+  color: #0171d3;
+  text-decoration: none;
+}
+
+.container .form .form-link a:hover {
+  color: #016dcb;
+}
+
+.container .form .line {
+  position: relative;
+  height: 1px;
+  width: 100%;
+  background: #d4d4d4;
+  margin: 36px 0;
+}
+
+.container .form .line::before {
+  content: "Or";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  color: #8b8b8b;
+  padding: 0 15px;
+}
+
+.container .form .media-options a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #232836;
+}
+
+.container .form .media-options a.facebook {
+  color: #fff;
+  background: #4267b2;
+}
+
+.container .form .media-options .google .google-icon,
+.container .form .media-options .facebook .facebook-icon {
+  height: 28px;
+  width: 28px;
+  color: #0171d3;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+
+.container .form .media-options a.google {
+  border: 1px solid #cacaca;
+}
+
+.container .form .media-options .google .google-icon {
+  background: #d0312d;
+  color: #fff;
+}
+
+@media (max-width: 400px) {
+  .container .form {
+    padding: 20px 10px;
+  }
+}
